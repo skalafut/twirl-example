@@ -36,12 +36,8 @@ def main():
     # configure tables
     #
     Binning = AlphaTwirl.Binning.Binning
-    Echo = AlphaTwirl.Binning.Echo
     Round = AlphaTwirl.Binning.Round
     RoundLog = AlphaTwirl.Binning.RoundLog
-    Combine = AlphaTwirl.Binning.Combine
-    echo = Echo(nextFunc = None)
-    echoNextPlusOne = Echo()
     htbin = Binning(boundaries = (0, 200, 400, 800))
     njetbin = Binning(boundaries = (1, 2, 3, 4, 5))
     tblcfg = [
@@ -87,9 +83,6 @@ def main():
         datasets = datasets,
         reader_collector_pairs = reader_collector_pairs
     )
-
-##__________________________________________________________________||
-def greater_than_zero(x): return x > 0
 
 ##__________________________________________________________________||
 if __name__ == '__main__':
